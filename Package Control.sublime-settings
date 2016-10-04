@@ -1,0 +1,17 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"Babel",
+		"BracketHighlighter",
+		"Console Wrap for js",
+		"Package Control",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"Theme - DC"
+	]
+}
