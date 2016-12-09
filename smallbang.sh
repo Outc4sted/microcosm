@@ -1,7 +1,7 @@
 #!/bin/bash
 
 st3Version=3125_amd64
-nvmVersion=v0.32.0
+nvmVersion=v0.32.1
 downloadDir=$(pwd)
 
 echo "Decrypting confidential settings"
@@ -65,8 +65,8 @@ echo "Copying ST3 package and IDE settings"
 curl -o ~/.config/sublime-text-3/Installed\ Packages/Package\ Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package
 ./sublsync.sh -P
 
+echo "Installing Docker"
 if [[ $(uname -m) == "x86_64" ]]; then
-    echo "Installing Docker"
     sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual apt-transport-https ca-certificates
     sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
     sudo apt-get update

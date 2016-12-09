@@ -4,8 +4,7 @@ usage="$(basename "$0") <options> -- Sync ST3 user settings to || from microcosm
 
 where <options>:
     -P, --pull   \t sync local settings from master; append -f to disregard if ST3 is running
-    -C, --commit \t commit updated settings to master
-    -h, --help   \t show this message"
+    -C, --commit \t commit updated settings to master"
 
 if [[ ( "$1" = "-P" ) || ( "$1" = "--pull" ) ]]; then
     if [[ ( -z $(pgrep -x sublime_text) ) || ( "$2" = "-f" ) ]]; then
@@ -28,7 +27,7 @@ elif [[ ( "$1" = "-C" ) || ( "$1" = "--commit" ) ]]; then
     git commit -m "Updating ST3 user settings"
     git push origin master
 else
-    echo -e "${usage}"
+    echo -e "Invalid option\n${usage}"
 fi
 
 exit
