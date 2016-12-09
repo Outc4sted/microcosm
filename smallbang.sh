@@ -44,11 +44,19 @@ cd microcosm
 ./crypto.sh -D
 rm -rf ${downloadDir}
 
+echo "Setting up .bashrc"
+echo -e "\nalias nlg=\"npm list -g --depth=0 2>/dev/null\"" >> ~/.bashrc
+echo -e "\nalias nll=\"npm list --depth=0 2>/dev/null\"" >> ~/.bashrc
+echo -e "\ncd ~/wrkspc" >> ~/.bashrc
+
 echo "Installing nvm and NodeJs"
 sudo apt-get install build-essential libssl-dev -y
 curl -o- https://raw.githubusercontent.com/creationix/nvm/${nvmVersion}/install.sh | bash
 source ~/.bashrc
 nvm install node
+
+echo "Installing dev npm packages"
+npm run globalDevpendencies
 
 echo "Installing Sublime Text 3 dev build"
 curl -o ~/Downloads/st3.deb https://download.sublimetext.com/sublime-text_build-${st3Version}.deb

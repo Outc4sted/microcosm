@@ -1,0 +1,20 @@
+{
+  "name": "microcosm",
+  "version": "1.0.0",
+  "author": "justen",
+  "license": "ISC",
+  "main": "microcosm.sh",
+  "scripts": {
+    "globalDevpendencies": "npm i -g"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Outc4sted/microcosm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Outc4sted/microcosm/issues"
+  },
+  "dependencies" : {
+    "yo": "*"
+  }
+}
