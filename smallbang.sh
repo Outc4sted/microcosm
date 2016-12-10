@@ -47,7 +47,7 @@ rm -rf ${downloadDir}
 echo "Setting up .bashrc"
 echo -e "\nalias nlg=\"npm list -g --depth=0 2>/dev/null\"" >> ~/.bashrc
 echo -e "\nalias nll=\"npm list --depth=0 2>/dev/null\"" >> ~/.bashrc
-echo -e "\ncd ~/wrkspc" >> ~/.bashrc
+echo -e "\n[[ \"\$PWD\" =~ \"wrkspc\" ]] || cd ~/wrkspc" >> ~/.bashrc
 
 echo "Installing nvm and NodeJs"
 sudo apt-get install build-essential libssl-dev -y

@@ -18,4 +18,4 @@ This repo assists with initializing a development workspace and syncing Sublime 
 ### Getting Started
 1. Download .zip of this repository then open a terminal
 2. `unzip ~/Downloads/microcosm-master.zip && cd !$:h`
-3. `./smallbang.sh`
+3. `./run.sh`
